@@ -13,3 +13,32 @@ $color-grey-dark-2: #6D5D4B;
 // FONT VARIABLES
 $font-primary: 'Nunito', sans-serif;
 $font-display: 'Josefin Sans', sans-serif;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+// Note
+// Font size is 62.5% because we want 1rem to be equal to 10px
+// Default browser pixels are 16px
+// 10px/16px = 62.5%
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+
+}
+
+// Note
+// First row will be taking 80% of the view port HEIGHT
+// Second row (and 4th, 5th and footer) automatically adjusts itself to the browser (be based on the height and width of the content inside it)
+// Third row will be taking 40% of the view port WIDTH
